@@ -10,7 +10,7 @@
     <div class="cardsBox">
       <ng-container *ngFor="let restaurant of data.response.stores">
         <div class="card">
-          <a class="cardAction" href="">
+          <a class="cardAction" (click)="sendRestaurantInfo(restaurant)">
             <img [src]="getImg(restaurant)" alt="{{ restaurant.name }}" />
           </a>
           <p class="cardTitle">{{ restaurant.name }}</p>

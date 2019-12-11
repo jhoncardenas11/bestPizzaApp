@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-restaurant-detail',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RestaurantDetailComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: ActivatedRoute) { }
 
   ngOnInit() {
+    this.router.queryParamMap.subscribe((data: any) => {
+      console.log(data.params);
+    });
   }
 
 }

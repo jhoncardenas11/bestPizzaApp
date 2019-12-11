@@ -8,7 +8,7 @@ const routes: Routes = [
   {path: '', component: LoginComponent},
   {path: 'singin', component: LoginComponent},
   {path: 'restaurants', component: RestaurantsComponent},
-  {path: 'restaurant/:id', component: RestaurantDetailComponent}
+  {path: 'restaurant', component: RestaurantDetailComponent}
 ];
 
 @NgModule({
