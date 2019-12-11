@@ -14,7 +14,5 @@ export class RestaurantsComponent implements OnInit {
 
   async ngOnInit() {
     this.data = await this.services.getData();
-    console.log(this.data.response);
   }
-
 }
