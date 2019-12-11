@@ -19,7 +19,7 @@ export class RestaurantsComponent implements OnInit {
 
   getImg(restaurant: any) {
     // console.log(restaurant);
-    let temp: string;
+    let temp = '../../../assets/img/sbarro_pizza.png';
     this.imgs.forEach(element => {
       if (element.id === restaurant.id) {
         console.log(element.url);
