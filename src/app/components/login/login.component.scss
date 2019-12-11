@@ -1,0 +1,74 @@
+main {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    grid-template-areas: "pizza login";
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    .section1 {
+        grid-area: pizza;
+        background-image: url(/assets/img/imagebkg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100%;
+        width: 100%;
+        display: grid;
+        img {
+            align-self: center;
+            width: 500px;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+    }
+    .section2 {
+        grid-area: login;
+        align-self: center;
+        justify-self: center;
+        width: 50%;
+        img {
+            width: 200px;
+            max-width: 100%;
+            height: 100%;
+            display: block;
+            margin: auto;
+        }
+        .textLogin {
+            text-align: center;
+            margin: 0;
+        }
+        h2 {
+            font-size: 2.5em;
+            margin-top: 20px !important;
+        }
+        h1 {
+            color: #655b5b;
+            font-family: 'OpenSans-Light';
+            margin-bottom: 20px !important;
+        }
+        .formBox {
+            form {
+                p {
+                    text-align: center;
+                    margin: 25px auto 25px auto;
+                    a {
+                        text-decoration: none;
+                        color: #000000;
+                    }
+                }
+                button {
+                    width: 100%;
+                    font-size: 1.2em;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    main {
+        grid-template-areas: "login login" !important;
+    }
+}

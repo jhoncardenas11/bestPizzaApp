@@ -1,0 +1,89 @@
+main {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    grid-template-areas: "pizza restaurants";
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    .section1 {
+        grid-area: pizza;
+        background-image: url(/assets/img/imagebkg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100%;
+        width: 100%;
+        .imgs {
+            display: grid;
+            .logo {
+                width: 80px;
+                max-width: 100%;
+                height: auto;
+                float: left;
+                margin: 15px;
+            }
+            .pizza {
+                align-self: center;
+                width: 500px;
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin: auto;
+            }
+        }
+    }
+    .section2 {
+        grid-area: restaurants;
+        width: 100%;
+        .logOut {
+            float: right;
+            margin-right: 10px;
+        }
+        .text1 {
+            text-decoration: underline;
+            text-decoration-color: #FFC600;
+            margin-left: 10px;
+        }
+        .text2 {
+            font-size: 2em;
+            margin-top: 25px;
+            margin-bottom: 2.5px;
+            margin-left: 10px;
+        }
+        .text3 {
+            font-size: .9em;
+            margin-top: 2.5px;
+            margin-bottom: 50px;
+            color: #655b5b;
+            font-family: 'OpenSans-Light';
+            margin-left: 10px;
+        }
+        .cardsBox {
+            display: flex;
+            .card {
+                margin: 20px;
+                .cardAction {
+                    img {
+                        width: 170px;
+                    }
+                }
+                .cardTitle {
+                    margin: 5px;
+                    font-size: 1.2em;
+                }
+                .cardLabel {
+                    margin: 5px;
+                    font-size: .9em;
+                    color: #655b5b;
+                    font-family: 'OpenSans-Light';
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    main {
+        grid-template-areas: "restaurants restaurants" !important;
+    }
+}
