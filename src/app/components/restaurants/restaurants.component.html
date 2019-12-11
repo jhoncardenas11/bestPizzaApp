@@ -2,26 +2,21 @@
   <section class="section1">
     <img src="../../../assets/img/Pizza.png" alt="pizza" />
   </section>
-  <section class="section2">
+  <section class="section2" *ngIf="data">
     <a class="logOut" href="">Salir</a>
     <p class="text1">Pizzerías</p>
     <p class="text2">Tiendas</p>
     <p class="text3">Escoge tu pizzeria favorita</p>
     <div class="cardsBox">
-      <div class="card">
-        <a class="cardAction" href="">
-          <img src="../../../assets/img/Panos_pizza.png" alt="" />
-        </a>
-        <p class="cardTitle">Pano's pizza</p>
-        <p class="cardLabel">Calle 54 #45 -56</p>
-      </div>
-      <div class="card">
-        <a class="cardAction" href="">
-          <img src="../../../assets/img/Panos_pizza.png" alt="" />
-        </a>
-        <p class="cardTitle">Pano's pizza</p>
-        <p class="cardLabel">Calle 54 #45 -56</p>
-      </div>
+      <ng-container *ngFor="let restaurant of data.response.stores">
+        <div class="card">
+          <a class="cardAction" href="">
+            <img src="../../../assets/img/Panos_pizza.png" alt="" />
+          </a>
+          <p class="cardTitle">{{ restaurant.name }}</p>
+          <p class="cardLabel">{{ restaurant.address }}</p>
+        </div>
+      </ng-container>
     </div>
     <app-footer></app-footer>
   </section>

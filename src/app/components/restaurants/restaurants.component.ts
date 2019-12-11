@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServiceService } from '../../services/service.service';
 
 @Component({
   selector: 'app-restaurants',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RestaurantsComponent implements OnInit {
 
-  constructor() { }
+  data: any;
 
-  ngOnInit() {
+  constructor(private services: ServiceService) { }
+
+  async ngOnInit() {
+    this.data = await this.services.getData();
+    console.log(this.data.response);
   }
 
 }

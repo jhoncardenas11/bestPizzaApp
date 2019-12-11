@@ -21,3 +21,15 @@ main{
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    main{
+        position: relative;
+        .logo{
+            justify-self: end;
+            img{
+                margin-right: 10px;
+            }
+        }
+    }
+}
