@@ -13,23 +13,14 @@ main {
         background-position: center;
         height: 100%;
         width: 100%;
-        .imgs {
-            display: grid;
-            .logo {
-                width: 80px;
-                max-width: 100%;
-                height: auto;
-                float: left;
-                margin: 15px;
-            }
-            .pizza {
-                align-self: center;
-                width: 500px;
-                max-width: 100%;
-                height: auto;
-                display: block;
-                margin: auto;
-            }
+        display: grid;
+        img {
+            align-self: center;
+            width: 500px;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: auto;
         }
     }
     .section2 {

@@ -1,0 +1,23 @@
+main{
+    position: absolute;
+    bottom: 0;
+    background-color: #1F1F1F;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    .sm{
+        align-self: center;
+        margin-left: 20px;
+        a{
+            margin: 0 5px;
+            color: #ffffff;
+            font-size: 2em;
+        }
+    }
+    .logo{
+        img{
+            width: 50px;
+            padding: 10px 0;
+        }
+    }
+}
