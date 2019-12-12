@@ -1,5 +1,27 @@
 # BestPizzaApp
 
+Para ejecutar el proyeco.
+
+1. npm install
+2. ng serve
+
+requisitos:
+1. angular:
+@angular-devkit/architect         0.803.20
+@angular-devkit/build-angular     0.803.20
+@angular-devkit/build-optimizer   0.803.20
+@angular-devkit/build-webpack     0.803.20
+@angular-devkit/core              8.3.20
+@angular-devkit/schematics        8.3.20
+@angular/cli                      8.3.20
+@ngtools/webpack                  8.3.20
+@schematics/angular               8.3.20
+@schematics/update                0.803.20
+rxjs                              6.4.0
+typescript                        3.5.3
+webpack                           4.39.2
+2. node v10.13.0
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
 
 ## Development server
