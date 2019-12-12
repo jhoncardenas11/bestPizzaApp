@@ -34,7 +34,8 @@ export class LoginComponent implements OnInit {
   singin() {
     // tslint:disable-next-line: max-line-length
     if (this.loginForm.value.email === this.user1.email && this.loginForm.value.password === this.user1.password || this.loginForm.value.email === this.user2.email && this.loginForm.value.password === this.user2.password) {
-      this.router.navigateByUrl('/restaurants');
+      localStorage.setItem('email', this.loginForm.value.email);
+      this.router.navigate(['/restaurants']);
     } else {
       Swal.fire({
         icon: 'error',

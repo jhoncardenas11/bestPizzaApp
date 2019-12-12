@@ -10,13 +10,18 @@ export class RestaurantDetailComponent implements OnInit {
 
   data: any;
 
-  constructor(private router: ActivatedRoute) { }
+  constructor(private router: ActivatedRoute, private nav: Router) { }
 
   ngOnInit() {
     this.router.queryParamMap.subscribe((data: any) => {
       console.log(data.params);
       this.data = data.params;
     });
+  }
+
+  logout() {
+    localStorage.removeItem('email');
+    this.nav.navigate(['/singin']);
   }
 
 }

@@ -9,6 +9,7 @@ import { RestaurantDetailComponent } from './components/restaurant-detail/restau
 import { FooterComponent } from './shared/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginGuard } from './auth/login.guard';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [LoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

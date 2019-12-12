@@ -37,4 +37,9 @@ export class RestaurantsComponent implements OnInit {
   sendRestaurantInfo(restaurant: any) {
     this.router.navigate(['/restaurant'], {queryParams: restaurant});
   }
+
+  logout() {
+    localStorage.removeItem('email');
+    this.router.navigate(['/singin']);
+  }
 }
