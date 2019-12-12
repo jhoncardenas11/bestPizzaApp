@@ -9,7 +9,7 @@ const routes: Routes = [
   {path: '', component: LoginComponent},
   {path: 'singin', component: LoginComponent},
   {path: 'restaurants', component: RestaurantsComponent, canActivate: [LoginGuard]},
-  {path: 'restaurant', component: RestaurantDetailComponent, canActivate: [LoginGuard]}
+  {path: 'restaurant/:id', component: RestaurantDetailComponent, canActivate: [LoginGuard]}
 ];
 
 @NgModule({

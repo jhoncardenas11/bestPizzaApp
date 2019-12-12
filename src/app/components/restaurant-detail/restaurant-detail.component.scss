@@ -39,11 +39,18 @@ main {
             text-decoration-color: #FFC600;
             margin-left: 10px;
         }
+        img{
+            display: block;
+            margin: auto;
+            max-width: 100%;
+            margin-top: 50px;
+        }
         .text2 {
             font-size: 2em;
             margin-top: 25px;
             margin-bottom: 2.5px;
             margin-left: 10px;
+            text-align: center;
         }
         .text3 {
             font-size: .9em;
@@ -52,6 +59,7 @@ main {
             color: #655b5b;
             font-family: 'OpenSans-Light';
             margin-left: 10px;
+            text-align: center;
         }
     }
 }

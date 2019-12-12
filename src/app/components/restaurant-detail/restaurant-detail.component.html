@@ -2,15 +2,27 @@
     <section class="section1">
         <img src="../../../assets/img/Pizza.png" alt="pizza" />
     </section>
-    <section class="section2">
+    <section class="section2" *ngIf="data">
         <a class="logOut" (click)="logout()">Salir</a>
         <p class="text1">Pizzerías</p>
+        <img [src]="getImg(data)" alt="">
         <p class="text2">{{data.name}}</p>
         <p class="text3">{{data.description}}</p>
         <p class="text2">Menu</p>
-        <ul>
-            <li *ngFor="let menu of data.products">item</li>
-        </ul>
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let menu of data.products">
+                    <td>{{menu.name}}</td>
+                    <td>$ {{menu.id}}</td>
+                </tr>
+            </tbody>
+        </table>
         <app-footer></app-footer>
     </section>
 </main>

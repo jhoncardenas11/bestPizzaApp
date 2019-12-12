@@ -22,6 +22,7 @@ export class RestaurantsComponent implements OnInit {
 
   async ngOnInit() {
     this.data = await this.services.getData();
+    console.log(this.data);
   }
 
   getImg(restaurant: any) {
@@ -36,6 +37,7 @@ export class RestaurantsComponent implements OnInit {
 
   sendRestaurantInfo(restaurant: any) {
     console.log(restaurant);
+    this.router.navigate([`/restaurant/${restaurant.id}`]);
   }
 
   logout() {
