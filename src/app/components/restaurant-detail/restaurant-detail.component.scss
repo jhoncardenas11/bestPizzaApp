@@ -1,0 +1,67 @@
+main {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    grid-template-areas: "pizza restaurants";
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    .section1 {
+        grid-area: pizza;
+        background-image: url(/assets/img/imagebkg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100%;
+        width: 100%;
+        display: grid;
+        img {
+            align-self: center;
+            width: 500px;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+    }
+    .section2 {
+        grid-area: restaurants;
+        width: 100%;
+        .logOut {
+            float: right;
+            margin-right: 10px;
+            text-decoration: none;
+            color: #655b5b;
+            margin-top: 15px;
+        }
+        .text1 {
+            text-decoration: underline;
+            text-decoration-color: #FFC600;
+            margin-left: 10px;
+        }
+        .text2 {
+            font-size: 2em;
+            margin-top: 25px;
+            margin-bottom: 2.5px;
+            margin-left: 10px;
+        }
+        .text3 {
+            font-size: .9em;
+            margin-top: 2.5px;
+            margin-bottom: 50px;
+            color: #655b5b;
+            font-family: 'OpenSans-Light';
+            margin-left: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        grid-template-areas: "restaurants restaurants" !important;
+        .section2 {
+            .text3 {
+                margin-bottom: 10px !important;
+            }
+        }
+    }
+}

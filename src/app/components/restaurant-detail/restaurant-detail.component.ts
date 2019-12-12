@@ -8,11 +8,14 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class RestaurantDetailComponent implements OnInit {
 
+  data: any;
+
   constructor(private router: ActivatedRoute) { }
 
   ngOnInit() {
     this.router.queryParamMap.subscribe((data: any) => {
       console.log(data.params);
+      this.data = data.params;
     });
   }
 

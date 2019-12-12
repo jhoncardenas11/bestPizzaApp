@@ -1,1 +1,16 @@
-<p>restaurant-detail works!</p>
+<main>
+    <section class="section1">
+        <img src="../../../assets/img/Pizza.png" alt="pizza" />
+    </section>
+    <section class="section2">
+        <a class="logOut">Salir</a>
+        <p class="text1">Pizzerías</p>
+        <p class="text2">{{data.name}}</p>
+        <p class="text3">{{data.description}}</p>
+        <p class="text2">Menu</p>
+        <ul>
+            <li *ngFor="let menu of data.products">item</li>
+        </ul>
+        <app-footer></app-footer>
+    </section>
+</main>
