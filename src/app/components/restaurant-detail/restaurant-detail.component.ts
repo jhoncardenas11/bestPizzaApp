@@ -12,7 +12,6 @@ export class RestaurantDetailComponent implements OnInit {
   data: any;
 
   constructor(private router: ActivatedRoute, private nav: Router) { }
-
   ngOnInit() {
     this.getObject(Event);
     this.router.queryParamMap.subscribe((data: any) => {
