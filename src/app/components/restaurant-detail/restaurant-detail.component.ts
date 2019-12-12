@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -8,15 +8,22 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class RestaurantDetailComponent implements OnInit {
 
+  @Input() restaurantObject: object;
   data: any;
 
   constructor(private router: ActivatedRoute, private nav: Router) { }
 
   ngOnInit() {
+    this.getObject(Event);
     this.router.queryParamMap.subscribe((data: any) => {
       console.log(data.params);
       this.data = data.params;
     });
+  }
+
+  getObject($event) {
+    this.restaurantObject = $event;
+    console.log(this.restaurantObject);
   }
 
   logout() {

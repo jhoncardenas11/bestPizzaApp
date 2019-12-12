@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ServiceService } from '../../services/service.service';
 import { Router } from '@angular/router';
 
@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./restaurants.component.scss']
 })
 export class RestaurantsComponent implements OnInit {
+
+  @Output() restaurantObject = new EventEmitter<object>();
 
   data: any;
   imgs = [
@@ -35,7 +37,11 @@ export class RestaurantsComponent implements OnInit {
   }
 
   sendRestaurantInfo(restaurant: any) {
-    this.router.navigate(['/restaurant'], {queryParams: restaurant});
+    const tempObjs = String(restaurant.products);
+    console.log(tempObjs);
+    // this.restaurantObject.emit(restaurant);
+    // console.log(temp);cambio?
+    // this.router.navigate(['/restaurant']);
   }
 
   logout() {

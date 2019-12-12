@@ -54,7 +54,7 @@ main {
         }
         .cardsBox {
             display: flex;
-            flex-wrap: wrap-reverse;
+            flex-wrap: wrap;
             .card {
                 margin: 20px;
                 .cardAction {
@@ -80,9 +80,12 @@ main {
 @media screen and (max-width: 768px) {
     main {
         grid-template-areas: "restaurants restaurants" !important;
-        .section2{
-            .text3{
+        .section2 {
+            .text3 {
                 margin-bottom: 10px !important;
+            }
+            .cardsBox {
+                flex-wrap: wrap-reverse;
             }
         }
     }
