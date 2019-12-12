@@ -2,7 +2,7 @@ main{
     position: absolute;
     bottom: 0;
     background-color: #1F1F1F;
-    width: 100%;
+    width: 55%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     .sm{
@@ -18,6 +18,8 @@ main{
         img{
             width: 50px;
             padding: 10px 0;
+            float: right;
+            margin-right: 10px;
         }
     }
 }
