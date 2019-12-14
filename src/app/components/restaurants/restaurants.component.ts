@@ -10,9 +10,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class RestaurantsComponent implements OnInit {
 
-  searchForm = new FormGroup({
-    search: new FormControl('')
-  });
+  filterRestaurant = '';
 
   data: any;
   imgs = [

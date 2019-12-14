@@ -8,8 +8,9 @@ import { RestaurantsComponent } from './components/restaurants/restaurants.compo
 import { RestaurantDetailComponent } from './components/restaurant-detail/restaurant-detail.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { LoginGuard } from './auth/login.guard';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -17,13 +18,15 @@ import { LoginGuard } from './auth/login.guard';
     LoginComponent,
     RestaurantsComponent,
     RestaurantDetailComponent,
-    FooterComponent
+    FooterComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [LoginGuard],
   bootstrap: [AppComponent]
