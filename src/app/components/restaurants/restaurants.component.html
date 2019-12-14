@@ -1,20 +1,23 @@
 <main>
     <section class="section1">
-        <img src="../../../assets/img/Pizza.png" alt="pizza" />
+        <img class="animated fadeInDown delay-1s" src="../../../assets/img/Pizza.png" alt="pizza " />
     </section>
-    <section class="section2" *ngIf="data">
-        <a class="logOut" (click)="logout()">Salir</a>
-        <p class="text1">Pizzerías</p>
-        <p class="text2">Tiendas</p>
-        <p class="text3">Escoge tu pizzeria favorita</p>
-        <div class="cardsBox">
-            <ng-container *ngFor="let restaurant of data.response.stores">
-                <div class="card">
-                    <a class="cardAction" (click)="sendRestaurantInfo(restaurant)">
-                        <img class="animated bounceIn delay-1s" [src]="getImg(restaurant)" alt="{{ restaurant.name }}" />
+    <section class="section2 " *ngIf="data ">
+        <a class="logOut " (click)="logout() ">Salir</a>
+        <p class="text1 ">Pizzerías</p>
+        <p class="text2 ">Tiendas</p>
+        <p class="text3 ">Escoge tu pizzeria favorita</p>
+        <form name="searchForm" [formGroup]="searchForm">
+            <input type="text" name="search" id="search" formControlName="search">
+        </form>
+        <div class="cardsBox ">
+            <ng-container *ngFor="let restaurant of data.response.stores ">
+                <div class="card ">
+                    <a class="cardAction " (click)="sendRestaurantInfo(restaurant) ">
+                        <img class="animated bounceIn delay-1s " [src]="getImg(restaurant) " alt="{{ restaurant.name }} " />
                     </a>
-                    <p class="cardTitle">{{ restaurant.name }}</p>
-                    <p class="cardLabel">{{ restaurant.address }}</p>
+                    <p class="cardTitle ">{{ restaurant.name }}</p>
+                    <p class="cardLabel ">{{ restaurant.address }}</p>
                 </div>
             </ng-container>
         </div>

@@ -1,11 +1,14 @@
 <main>
     <section class="section1">
-        <img src="../../../assets/img/Pizza.png" alt="pizza" />
+        <img class="animated fadeInDown delay-1s" src="../../../assets/img/Pizza.png" alt="pizza" />
     </section>
     <section class="section2" *ngIf="data">
         <a class="logOut" (click)="logout()">Salir</a>
+        <p class="backButton">
+            <a routerLink="/restaurants">Regresar</a>
+        </p>
         <p class="text1">Pizzerías</p>
-        <img [src]="getImg(data)" alt="">
+        <img class="animated bounceIn delay-1s" [src]="getImg(data)" alt="">
         <p class="text2">{{data.name}}</p>
         <p class="text3">{{data.description}}</p>
         <p class="text2">Menu</p>

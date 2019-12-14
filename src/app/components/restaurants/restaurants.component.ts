@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceService } from '../../services/service.service';
 import { Router } from '@angular/router';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-restaurants',
@@ -8,6 +9,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./restaurants.component.scss']
 })
 export class RestaurantsComponent implements OnInit {
+
+  searchForm = new FormGroup({
+    search: new FormControl('')
+  });
 
   data: any;
   imgs = [

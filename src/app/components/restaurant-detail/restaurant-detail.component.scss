@@ -33,13 +33,26 @@ main {
             color: #655b5b;
             margin-top: 15px;
             cursor: pointer;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        .backButton {
+            a {
+                text-decoration: none;
+                margin-left: 10px;
+                color: #666666;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
         .text1 {
             text-decoration: underline;
             text-decoration-color: #FFC600;
             margin-left: 10px;
         }
-        img{
+        img {
             display: block;
             margin: auto;
             max-width: 100%;

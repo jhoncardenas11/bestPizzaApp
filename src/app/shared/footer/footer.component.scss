@@ -1,21 +1,18 @@
-main{
-    position: absolute;
-    bottom: 0;
+main {
     background-color: #1F1F1F;
-    width: 55%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    .sm{
+    .sm {
         align-self: center;
         margin-left: 20px;
-        a{
+        a {
             margin: 0 5px;
             color: #ffffff;
             font-size: 2em;
         }
     }
-    .logo{
-        img{
+    .logo {
+        img {
             width: 50px;
             padding: 10px 0;
             float: right;
@@ -25,11 +22,11 @@ main{
 }
 
 @media screen and (max-width: 768px) {
-    main{
+    main {
         position: relative;
-        .logo{
+        .logo {
             justify-self: end;
-            img{
+            img {
                 margin-right: 10px;
             }
         }
