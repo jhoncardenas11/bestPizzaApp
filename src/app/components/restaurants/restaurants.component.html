@@ -7,9 +7,11 @@
         <p class="text1 ">Pizzerías</p>
         <p class="text2 ">Tiendas</p>
         <p class="text3 ">Escoge tu pizzeria favorita</p>
-        <form name="searchForm" [formGroup]="searchForm">
-            <input type="text" name="search" id="search" formControlName="search">
-        </form>
+        <div class="boxForm">
+            <form name="searchForm" [formGroup]="searchForm">
+                <input type="text" placeholder="Buscar restaurante" name="search" id="search" formControlName="search">
+            </form>
+        </div>
         <div class="cardsBox ">
             <ng-container *ngFor="let restaurant of data.response.stores ">
                 <div class="card ">
