@@ -3,7 +3,7 @@
 Para ejecutar el proyeco.
 
 1. Clonar el proyecto localmente.
-2. Llegar a la carpeta principal del proyecto mediando consola
+2. Llegar a la carpeta principal del proyecto mediante consola
 3. En la consola ejecutar el comando npm install
 5. Luego el comando ng serve
 6. Abrir proyecto en culaquier navegador en la ruta localhost:4200 (preferiblemente Google Chrome)
