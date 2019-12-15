@@ -2,8 +2,13 @@
 
 Para ejecutar el proyeco.
 
-1. npm install
-2. ng serve
+1. Clonar el proyecto localmente.
+2. Llegar a la carpeta principal del proyecto mediando consola
+3. En la consola ejecutar el comando npm install
+5. Luego el comando ng serve
+6. Abrir proyecto en culaquier navegador en la ruta localhost:4200 (preferiblemente Google Chrome)
+
+mi correo: jhoncardenas.11@gmail.com
 
 requisitos:
 1. angular:
